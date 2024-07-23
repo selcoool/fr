@@ -19,6 +19,7 @@ RUN npm run build
 RUN npm install -g serve
 
 # Expose the port the app runs on
-EXPOSE 5000
+EXPOSE 3000
 
-CMD [ "npm", "start"]
+# Serve the built React app
+CMD ["serve", "-s", "build"]
